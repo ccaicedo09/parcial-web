@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+    <script src="js/maps.js"></script>
+    <title>Concesionario</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Concesionario</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="vehicles.html">Vehículos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true">Test Drive</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true">Sobre nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="cars-catalog">
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Toyota Corolla -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/corolla.png" class="card-img-top" alt="Toyota Corolla">
+                        <div class="card-body">
+                            <h5 class="card-title">Toyota Corolla</h5>
+                            <p class="card-text">Un sedán confiable y eficiente, ideal para el uso diario con su equilibrio perfecto entre economía de combustible, comodidad y tecnología avanzada.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#corollaModal">
+                                Ficha técnica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toyota Fortuner -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/fortuner-blanca.png" class="card-img-top" alt="Toyota Fortuner">
+                        <div class="card-body">
+                            <h5 class="card-title">Toyota Fortuner</h5>
+                            <p class="card-text">Un SUV robusto con tracción 4x4, diseñado para la aventura y la conducción todoterreno, ofreciendo lujo y espacio interior para la familia.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fortunerModal">
+                                Ficha técnica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toyota RAV4 -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/rav4.png" class="card-img-top" alt="Toyota RAV4">
+                        <div class="card-body">
+                            <h5 class="card-title">Toyota RAV4</h5>
+                            <p class="card-text">Un SUV versátil con tracción total, perfecto para el estilo de vida urbano y viajes largos, combinando potencia, eficiencia híbrida y tecnología de vanguardia.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rav4Modal">
+                                Ficha técnica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-5">
+                <!-- Yaris Cross -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/yaris-cross.png" class="card-img-top" alt="Yaris Cross">
+                        <div class="card-body">
+                            <h5 class="card-title">Yaris Cross</h5>
+                            <p class="card-text">Un crossover compacto que ofrece la eficiencia y agilidad de un Yaris con la altura y versatilidad de un SUV, ideal para la ciudad y escapadas de fin de semana.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#yarisCrossModal">
+                                Ficha técnica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Yaris Sport -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/yaris-sport.png" class="card-img-top" alt="Yaris Sport">
+                        <div class="card-body">
+                            <h5 class="card-title">Yaris Sport</h5>
+                            <p class="card-text">Un hatchback dinámico y juvenil, con un diseño aerodinámico, excelente maniobrabilidad y tecnologías enfocadas en la eficiencia y la conectividad.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#yarisSportModal">
+                                Ficha técnica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toyota Hilux -->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/hilux.jpg" class="card-img-top" alt="Toyota Hilux">
+                        <div class="card-body">
+                            <h5 class="card-title">Toyota Hilux</h5>
+                            <p class="card-text">Una pickup resistente y poderosa, reconocida por su capacidad de carga, durabilidad en condiciones extremas y rendimiento superior en trabajos pesados y terrenos complicados.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hiluxModal">
+                                Ficha técnica
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modales para cada vehículo -->
+    
+    <!-- Modal Toyota Corolla -->
+    <div class="modal fade" id="corollaModal" tabindex="-1" aria-labelledby="corollaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="corollaModalLabel">Ficha Técnica - Toyota Corolla</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Motor:</strong> 1.8L o 2.0L de cuatro cilindros.</p>
+                    <p><strong>Potencia:</strong> 132 - 169 caballos de fuerza.</p>
+                    <p><strong>Transmisión:</strong> Manual de 6 velocidades o automática CVT.</p>
+                    <p><strong>Consumo de combustible:</strong> 6.5 - 7.5 L/100 km.</p>
+                    <p><strong>Capacidad:</strong> 5 pasajeros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Toyota Fortuner -->
+    <div class="modal fade" id="fortunerModal" tabindex="-1" aria-labelledby="fortunerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fortunerModalLabel">Ficha Técnica - Toyota Fortuner</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Motor:</strong> 2.7L gasolina o 2.8L turbodiésel.</p>
+                    <p><strong>Potencia:</strong> Hasta 204 caballos de fuerza.</p>
+                    <p><strong>Transmisión:</strong> Manual o automática de 6 velocidades.</p>
+                    <p><strong>Capacidad:</strong> 7 pasajeros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Toyota RAV4 -->
+    <div class="modal fade" id="rav4Modal" tabindex="-1" aria-labelledby="rav4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rav4ModalLabel">Ficha Técnica - Toyota RAV4</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Motor:</strong> 2.5L de cuatro cilindros o sistema híbrido.</p>
+                    <p><strong>Potencia:</strong> Hasta 219 caballos de fuerza.</p>
+                    <p><strong>Transmisión:</strong> Automática de 8 velocidades o CVT en híbridos.</p>
+                    <p><strong>Capacidad:</strong> 5 pasajeros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Toyota Yaris Cross -->
+    <div class="modal fade" id="yarisCrossModal" tabindex="-1" aria-labelledby="rav4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rav4ModalLabel">Ficha Técnica - Yaris Cross</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Motor:</strong> 2.5L de cuatro cilindros o sistema híbrido.</p>
+                    <p><strong>Potencia:</strong> Hasta 219 caballos de fuerza.</p>
+                    <p><strong>Transmisión:</strong> Automática de 8 velocidades o CVT en híbridos.</p>
+                    <p><strong>Capacidad:</strong> 5 pasajeros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Toyota Yaris Sport -->
+    <div class="modal fade" id="yarisSportModal" tabindex="-1" aria-labelledby="rav4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rav4ModalLabel">Ficha Técnica - Yaris Sport</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Motor:</strong> 2.5L de cuatro cilindros o sistema híbrido.</p>
+                    <p><strong>Potencia:</strong> Hasta 219 caballos de fuerza.</p>
+                    <p><strong>Transmisión:</strong> Automática de 8 velocidades o CVT en híbridos.</p>
+                    <p><strong>Capacidad:</strong> 5 pasajeros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Toyota Hilux -->
+    <div class="modal fade" id="hiluxModal" tabindex="-1" aria-labelledby="rav4ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rav4ModalLabel">Ficha Técnica - Toyota Hilux</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Motor:</strong> 2.5L de cuatro cilindros o sistema híbrido.</p>
+                    <p><strong>Potencia:</strong> Hasta 219 caballos de fuerza.</p>
+                    <p><strong>Transmisión:</strong> Automática de 8 velocidades o CVT en híbridos.</p>
+                    <p><strong>Capacidad:</strong> 5 pasajeros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
